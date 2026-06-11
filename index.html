@@ -27,7 +27,7 @@
   #lerr{color:#f55;font-size:12px;margin-top:10px;display:none;}
 
   /* APP */
-  #app{display:none;flex-direction:column;height:100%;}
+  #app{display:none;flex-direction:column;height:100%;width:100%;max-width:520px;margin:0 auto;border-left:1px solid var(--border);border-right:1px solid var(--border);}
 
   /* HEADER */
   .hdr{background:rgba(8,8,8,.97);border-bottom:1px solid var(--border);padding:0 16px;height:50px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
@@ -209,12 +209,12 @@
   <div class="scroll">
     <!-- TABS -->
     <div class="tabs">
-      <div class="tab active" onclick="showTab('inicio')">Inicio</div>
-      <div class="tab" onclick="showTab('podcasts')">Podcasts</div>
-      <div class="tab" onclick="showTab('rutinas')">Rutinas</div>
-      <div class="tab" onclick="showTab('cafes')">Cafés</div>
-      <div class="tab" onclick="showTab('menus')">Menús</div>
-      <div class="tab" onclick="showTab('guias')">Organízate</div>
+      <div class="tab active" data-tab="inicio" onclick="showTab('inicio')">Inicio</div>
+      <div class="tab" data-tab="guias" onclick="showTab('guias')">Organízate</div>
+      <div class="tab" data-tab="menus" onclick="showTab('menus')">Menús</div>
+      <div class="tab" data-tab="rutinas" onclick="showTab('rutinas')">Rutinas</div>
+      <div class="tab" data-tab="cafes" onclick="showTab('cafes')">Cafés</div>
+      <div class="tab" data-tab="podcasts" onclick="showTab('podcasts')">Podcasts</div>
     </div>
 
     <!-- INICIO -->
@@ -586,9 +586,8 @@
     document.getElementById('app').style.display='flex';
   }
   function showTab(id){
-    document.querySelectorAll('.tab').forEach((t,i)=>{
-      const ids=['inicio','podcasts','rutinas','cafes','guias'];
-      t.classList.toggle('active',ids[i]===id);
+    document.querySelectorAll('.tab').forEach(t=>{
+      t.classList.toggle('active',t.dataset.tab===id);
     });
     document.querySelectorAll('.page').forEach(p=>{
       p.classList.toggle('active',p.id==='tab-'+id);
