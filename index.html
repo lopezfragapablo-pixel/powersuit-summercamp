@@ -18,6 +18,7 @@
   #login{position:fixed;inset:0;background:var(--black);display:flex;align-items:center;justify-content:center;z-index:999;}
   .lbox{background:var(--s1);border:1px solid var(--border);border-radius:18px;padding:40px 32px;width:90%;max-width:360px;text-align:center;}
   .llogo{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:24px;letter-spacing:5px;color:var(--blue);margin-bottom:4px;}
+  .llogo-img{width:90px;height:90px;border-radius:50%;object-fit:cover;display:block;margin:0 auto 14px;}
   .lsub{font-size:10px;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:28px;}
   .lbox h2{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;margin-bottom:18px;}
   #pwd{width:100%;background:var(--s2);border:1px solid var(--border);border-radius:10px;padding:13px;color:var(--white);font-size:15px;letter-spacing:3px;text-align:center;outline:none;margin-bottom:12px;font-family:'Barlow',sans-serif;}
@@ -30,7 +31,8 @@
 
   /* HEADER */
   .hdr{background:rgba(8,8,8,.97);border-bottom:1px solid var(--border);padding:0 16px;height:50px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
-  .hdr-logo{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:17px;letter-spacing:4px;color:var(--blue);}
+  .hdr-logo{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:17px;letter-spacing:4px;color:var(--blue);display:flex;align-items:center;gap:9px;}
+  .hdr-logo img{width:36px;height:36px;border-radius:50%;object-fit:cover;display:block;}
   .hdr-right{font-size:10px;color:var(--gray);letter-spacing:2px;}
 
   /* SCROLL AREA */
@@ -186,6 +188,7 @@
 <!-- LOGIN -->
 <div id="login">
   <div class="lbox">
+    <img class="llogo-img" src="logo.png" alt="Powersuit">
     <div class="llogo">POWERSUIT</div>
     <div class="lsub">Summer Camp 2026</div>
     <h2>Accede a tu contenido</h2>
@@ -198,7 +201,7 @@
 <!-- APP -->
 <div id="app">
   <div class="hdr">
-    <div class="hdr-logo">POWERSUIT</div>
+    <div class="hdr-logo"><img src="logo.png" alt="Powersuit">POWERSUIT</div>
     <div class="hdr-right">SUMMER CAMP 2026</div>
   </div>
 
