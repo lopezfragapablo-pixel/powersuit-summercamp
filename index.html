@@ -172,8 +172,9 @@
 
   /* MENÚS */
   .menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:16px;}
-  .menu-card{background:var(--s1);border:1px solid var(--border);border-radius:12px;padding:14px 12px;transition:border-color .2s;}
+  .menu-card{background:var(--s1);border:1px solid var(--border);border-radius:12px;padding:14px 12px;transition:border-color .2s;display:block;text-decoration:none;color:inherit;cursor:pointer;}
   .menu-card:hover{border-color:var(--blue);}
+  .menu-open{margin-top:10px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--blue);}
   .menu-racion{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:22px;color:var(--blue);line-height:1;margin-bottom:4px;}
   .menu-label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-bottom:8px;font-weight:600;}
   .menu-desc{font-size:11px;color:var(--lgray);line-height:1.4;}
@@ -488,26 +489,30 @@
       <p style="font-size:12px;color:var(--lgray);line-height:1.5;margin-bottom:16px;">No necesitas comer perfecto. Necesitas tener opciones preparadas para no decidir siempre con hambre, calor y una cerveza delante.</p>
 
       <div class="menu-grid">
-        <div class="menu-card">
+        <a class="menu-card" href="menus-12-15.pdf" target="_blank">
           <div class="menu-racion">12-15</div>
           <div class="menu-label">Raciones</div>
           <div class="menu-desc">Menús ligeros para mantener el control sin complicarte.</div>
-        </div>
-        <div class="menu-card">
+          <div class="menu-open">Ver menú →</div>
+        </a>
+        <a class="menu-card" href="menus-15-18.pdf" target="_blank">
           <div class="menu-racion">15-18</div>
           <div class="menu-label">Raciones</div>
           <div class="menu-desc">Opciones equilibradas para seguir avanzando en verano.</div>
-        </div>
-        <div class="menu-card">
+          <div class="menu-open">Ver menú →</div>
+        </a>
+        <a class="menu-card" href="menus-18-20.pdf" target="_blank">
           <div class="menu-racion">18-20</div>
           <div class="menu-label">Raciones</div>
           <div class="menu-desc">Menús más completos para días con más actividad o energía.</div>
-        </div>
-        <div class="menu-card">
+          <div class="menu-open">Ver menú →</div>
+        </a>
+        <a class="menu-card" href="menus-20.pdf" target="_blank">
           <div class="menu-racion">+20</div>
           <div class="menu-label">Raciones</div>
           <div class="menu-desc">Opciones altas en energía para más raciones asignadas.</div>
-        </div>
+          <div class="menu-open">Ver menú →</div>
+        </a>
       </div>
 
       <!-- 🔗 SUSTITUYE "ENLACE_GOOGLE_DRIVE" por tu link de Google Drive cuando lo tengas -->
