@@ -43,7 +43,7 @@
   .tabs{background:var(--s1);border-bottom:1px solid var(--border);display:flex;position:sticky;top:0;z-index:50;flex-shrink:0;}
   .tab{flex:1;padding:12px 4px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:1px;text-transform:uppercase;text-align:center;color:var(--gray);cursor:pointer;border-bottom:2px solid transparent;transition:color .2s,border-color .2s;}
   .tab.active{color:var(--blue);border-bottom-color:var(--blue);}
-  .page-intro{background:var(--s2);border-bottom:1px solid var(--border);padding:10px 16px;font-size:11px;color:var(--lgray);line-height:1.4;font-style:italic;}
+  .page-intro{background:var(--s2);border-bottom:1px solid var(--border);padding:12px 16px;font-size:13px;color:var(--lgray);line-height:1.45;font-style:italic;}
   .cafe-suggest{background:linear-gradient(135deg,#0a1a0a,#0d1a10);border:1px solid rgba(74,222,128,.2);border-radius:12px;padding:14px;margin-top:4px;margin-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
   .cafe-suggest-text{font-size:12px;color:var(--lgray);line-height:1.4;}
   .cafe-suggest-text b{color:var(--green);display:block;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:800;text-transform:uppercase;margin-bottom:2px;}
@@ -117,8 +117,8 @@
 
   /* GUÍAS */
   .plan-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:14px;}
-  .plan-card{background:var(--s1);border:1px solid var(--border);border-radius:12px;padding:14px 12px;}
-  .plan-week{font-family:'Barlow Condensed',sans-serif;font-size:32px;font-weight:900;color:var(--blue);opacity:.2;line-height:1;margin-bottom:6px;}
+  .plan-card{background:var(--s1);border:1px solid var(--border);border-radius:12px;padding:12px 11px;}
+  .plan-week{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:900;color:var(--blue);opacity:.2;line-height:1;margin-bottom:4px;}
   .plan-tag{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--blue);font-weight:700;margin-bottom:4px;}
   .plan-pod{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:12px;text-transform:uppercase;line-height:1.2;margin-bottom:4px;}
   .plan-rut{font-size:11px;color:var(--orange);font-weight:600;margin-bottom:6px;}
@@ -133,7 +133,7 @@
   .vac-list li::before{content:"→";position:absolute;left:0;color:var(--blue);font-size:9px;top:1px;}
 
   .min-list{display:flex;flex-direction:column;gap:8px;margin-bottom:14px;}
-  .min-row{background:var(--s1);border:1px solid var(--border);border-radius:10px;padding:12px 14px;display:flex;gap:12px;align-items:flex-start;}
+  .min-row{background:var(--s1);border:1px solid var(--border);border-radius:10px;padding:10px 14px;display:flex;gap:12px;align-items:flex-start;}
   .min-n{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;color:var(--blue);opacity:.25;line-height:1;flex-shrink:0;width:22px;}
   .min-t{font-size:12px;color:var(--lgray);line-height:1.4;padding-top:3px;}
 
@@ -187,7 +187,7 @@
   /* AJUSTES MÓVIL: textos más grandes y bloques más compactos */
   @media (max-width:520px){
     .tab{font-size:13px;padding:13px 4px;}
-    .page-intro{font-size:14px;}
+    .page-intro{font-size:15px;}
     .hero h1{font-size:28px;}
     .hero-sub{font-size:14px;}
     .hero-photo{width:60px;height:60px;}
@@ -255,7 +255,7 @@
     <!-- TABS -->
     <div class="tabs">
       <div class="tab active" data-tab="inicio" onclick="showTab('inicio')">Inicio</div>
-      <div class="tab" data-tab="guias" onclick="showTab('guias')">Organízate</div>
+      <div class="tab" data-tab="guias" onclick="showTab('guias')">Plan</div>
       <div class="tab" data-tab="menus" onclick="showTab('menus')">Menús</div>
       <div class="tab" data-tab="rutinas" onclick="showTab('rutinas')">Rutinas</div>
       <div class="tab" data-tab="cafes" onclick="showTab('cafes')">Cafés</div>
@@ -383,7 +383,8 @@
     <div class="page" id="tab-cafes">
       <div class="page-intro">Para los días que solo tienes 5 minutos. Poco es mejor que nada.</div>
       <div class="sec-label">5 minutos</div>
-      <div class="sec-title" style="margin-bottom:14px;">Cafés de Movimiento</div>
+      <div class="sec-title">Cafés de Movimiento</div>
+      <p style="font-size:14px;color:var(--green);font-weight:600;line-height:1.5;margin-bottom:14px;">⏱ Tienes 5 minutos: repite de 3 a 5 veces el minicircuito. Ya está.</p>
       <div class="cafe-grid">
 
         <div class="cafe-card">
@@ -391,7 +392,6 @@
             <iframe src="https://www.youtube.com/embed/V1uHJ3mVaU0?rel=0&modestbranding=1" allowfullscreen></iframe>
             <div style="font-size:22px;">🦵</div>
           </div></div>
-          <div class="cafe-info"><div class="cafe-dur">⏱ 5 min</div><div class="cafe-title">Metabólico Piernas</div><div class="cafe-desc">3 ejercicios · Activa después de horas sentado.</div></div>
         </div>
 
         <div class="cafe-card">
@@ -399,7 +399,6 @@
             <iframe src="https://www.youtube.com/embed/7ykt1XYhebY?rel=0&modestbranding=1" allowfullscreen></iframe>
             <div style="font-size:22px;">💪</div>
           </div></div>
-          <div class="cafe-info"><div class="cafe-dur">⏱ 5 min</div><div class="cafe-title">Metabólico Core</div><div class="cafe-desc">3 ejercicios · Abdomen y zona media.</div></div>
         </div>
 
         <div class="cafe-card">
@@ -407,7 +406,6 @@
             <iframe src="https://www.youtube.com/embed/UHeUHnVkhGw?rel=0&modestbranding=1" allowfullscreen></iframe>
             <div style="font-size:22px;">🔥</div>
           </div></div>
-          <div class="cafe-info"><div class="cafe-dur">⏱ 5 min</div><div class="cafe-title">Metabólico Cardio</div><div class="cafe-desc">3 ejercicios · Sube pulsaciones ya.</div></div>
         </div>
 
         <div class="cafe-card">
@@ -415,7 +413,6 @@
             <iframe src="https://www.youtube.com/embed/OI3tWEOCPs8?rel=0&modestbranding=1" allowfullscreen></iframe>
             <div style="font-size:22px;">🧍</div>
           </div></div>
-          <div class="cafe-info"><div class="cafe-dur">⏱ 5 min</div><div class="cafe-title">Metabólico Espalda</div><div class="cafe-desc">3 ejercicios · Activa la parte alta.</div></div>
         </div>
 
         <div class="cafe-card">
@@ -423,7 +420,6 @@
             <iframe src="https://www.youtube.com/embed/qc4MKfJAUQI?rel=0&modestbranding=1" allowfullscreen></iframe>
             <div style="font-size:22px;">⚡</div>
           </div></div>
-          <div class="cafe-info"><div class="cafe-dur">⏱ 5 min</div><div class="cafe-title">Metabólico Total</div><div class="cafe-desc">3 ejercicios · Mueve todo el cuerpo.</div></div>
         </div>
 
         <div class="cafe-card">
@@ -431,7 +427,6 @@
             <iframe src="https://www.youtube.com/embed/SFhdEH48OPs?rel=0&modestbranding=1" allowfullscreen></iframe>
             <div style="font-size:22px;">🧘</div>
           </div></div>
-          <div class="cafe-info"><div class="cafe-dur">⏱ 5 min</div><div class="cafe-title">Metabólico Suave</div><div class="cafe-desc">3 ejercicios · Para días de cansancio o calor.</div></div>
         </div>
 
       </div>
@@ -443,7 +438,7 @@
 
       <div class="sec-label">Nutrición de verano</div>
       <div class="sec-title">Menús que te salvan</div>
-      <p style="font-size:13px;color:var(--lgray);line-height:1.5;margin-bottom:16px;">Busca tu rango de raciones y entra directamente en tu menú.</p>
+      <p style="font-size:13px;color:var(--lgray);line-height:1.5;margin-bottom:16px;">Identifica las raciones que tienes asignadas en tu aplicación de alimentación y escoge el rango en el que te encuentras.</p>
 
       <div class="menu-grid">
         <a class="menu-card" href="menus-12-15.pdf" target="_blank">
@@ -480,13 +475,25 @@
     <div class="page" id="tab-guias">
       <div class="page-intro">Tu plan de verano, cómo adaptarlo si viajas y los mínimos para no perder el control.</div>
 
-      <div class="sec-label">Estructura</div>
-      <div class="sec-title">Plan de 4 semanas</div>
-      <div class="plan-grid" style="margin-bottom:14px;">
-        <div class="plan-card"><div class="plan-week">01</div><div class="plan-tag">Semana 1</div><div class="plan-pod">El verano no es una pausa</div><div class="plan-rut">🔥 Combustión 1</div><div class="plan-obj">No desconectar.</div></div>
-        <div class="plan-card"><div class="plan-week">02</div><div class="plan-tag">Semana 2</div><div class="plan-pod">Comer fuera sin cargarte el progreso</div><div class="plan-rut">🔥 Combustión 2</div><div class="plan-obj">Gestionar comidas fuera.</div></div>
-        <div class="plan-card"><div class="plan-week">03</div><div class="plan-tag">Semana 3</div><div class="plan-pod">Entrenar con calor y poco tiempo</div><div class="plan-rut">🔥 Combustión Combat</div><div class="plan-obj">Seguir sin tu rutina normal.</div></div>
-        <div class="plan-card"><div class="plan-week">04</div><div class="plan-tag">Semana 4</div><div class="plan-pod">Volver sin empezar de cero</div><div class="plan-rut">🔥 Combustión 4</div><div class="plan-obj">Retomar sin culpa.</div></div>
+      <div class="sec-label">Adaptación</div>
+      <div class="sec-title">Modo verano</div>
+      <p style="font-size:13px;color:var(--lgray);line-height:1.5;margin-bottom:12px;">Para las semanas en las que la vida se lía y no puedes seguir tu rutina normal. No pasa nada: adapta con esto.</p>
+      <div class="qg-grid" style="margin-bottom:14px;">
+        <div class="qg-card" onclick="showTab('rutinas')" style="cursor:pointer;">
+          <div class="qg-icon">🔥</div>
+          <div class="qg-text"><div class="qg-label">Rutinas Combustión</div><div class="qg-desc">Si no has podido ir al gimnasio, haz una en casa o donde estés.</div></div>
+          <div class="prob-arrow">IR →</div>
+        </div>
+        <div class="qg-card" onclick="showTab('cafes')" style="cursor:pointer;">
+          <div class="qg-icon">⚡</div>
+          <div class="qg-text"><div class="qg-label">Cafés de movimiento</div><div class="qg-desc">Días sin tiempo: 5 minutos y sigues en el proceso.</div></div>
+          <div class="prob-arrow">IR →</div>
+        </div>
+        <div class="qg-card" onclick="showTab('menus')" style="cursor:pointer;">
+          <div class="qg-icon">🥗</div>
+          <div class="qg-text"><div class="qg-label">Menús</div><div class="qg-desc">Si comes fuera o no puedes cocinar, usa tu rango de raciones.</div></div>
+          <div class="prob-arrow">IR →</div>
+        </div>
       </div>
       <div class="italic-box">"Si no puedes seguirlo perfecto, adapta. Pero no desaparezcas."</div>
 
@@ -512,9 +519,9 @@
       </div>
 
       <div class="cta-box">
-        <div class="cta-title">Septiembre no tiene que ser<br><span>volver a empezar</span></div>
-        <div class="cta-text">Usa el camp, adapta lo que haga falta y sigue reportando.</div>
-        <button class="cta-btn" onclick="showTab('inicio');document.querySelector('.scroll').scrollTo(0,0)">↑ Volver al inicio</button>
+        <div class="cta-title">Sigue adaptando,<br><span>pero no desaparezcas</span></div>
+        <div class="cta-text">Usa el Summer Camp según lo que necesites estos días: rutinas, cafés de movimiento, menús o modo vacaciones.<br><br>No hace falta hacerlo perfecto. La clave es seguir presente, adaptar cuando toque y no soltar el proceso.<br><br>Cualquier cosa que necesites, avísame y lo ajustamos.<br>Ánimo con estos días de verano. Vamos a por ello. 💪</div>
+        <button class="cta-btn" onclick="irARecursos()">VOLVER A ELEGIR RECURSO</button>
       </div>
 
       <footer><b>POWERSUIT</b> Summer Camp 2026 · Contenido exclusivo</footer>
@@ -538,6 +545,13 @@
   if(sessionStorage.getItem('sc')==='1'){
     document.getElementById('login').style.display='none';
     document.getElementById('app').style.display='flex';
+  }
+  function irARecursos(){
+    showTab('inicio');
+    setTimeout(function(){
+      var el=document.getElementById('que-necesitas');
+      if(el){el.scrollIntoView({behavior:'smooth',block:'start'});}
+    },100);
   }
   function showTab(id){
     document.querySelectorAll('.tab').forEach(t=>{
